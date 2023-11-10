@@ -10,8 +10,8 @@ DishDizzle is a delightful recipe searching web app built using React and powere
 
 ## Tech Stack
 DishDizzle is built using the following technologies:
-- **React:** A JavaScript library for building user interfaces.
-- **TheMealDB API:** A free and open database of food recipes from around the world.
-
+- **React** 
+- **TailwindCSS**
+- **TheMealDB API**
 
 **_Happy cooking with DishDizzle! 🍽️✨_**
