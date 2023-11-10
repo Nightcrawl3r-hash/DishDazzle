@@ -14,4 +14,7 @@ DishDizzle is built using the following technologies:
 - **TailwindCSS**
 - **TheMealDB API**
 
+## Screenshots
+(Screenshots/Home.png)
+(Screenshots/home2.png)
 **_Happy cooking with DishDizzle! 🍽️✨_**
