@@ -8,21 +8,20 @@ function App() {
   const [error, setError] = useState("");
   // const URL = `https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`;
 
-
   useEffect(() => {
     async function fetchData() {
       try {
         setLoading(true);
         setError("");
-        // maile yo url change gareko matra ho
-          const res = await fetch(
+
+        const res = await fetch(
           `https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`
         );
         if (!res.ok) {
           throw new Error("Something went wrong with fetching data...");
         }
         const data = await res.json();
-        console.log(data);
+        //console.log(data);
         if (!data.meals) {
           throw new Error("Meal not found");
         }
@@ -110,7 +109,7 @@ function App() {
                           <strong>Tags:</strong>
                           {result.strTags ? `${result.strTags}` : `Unknown`}
                         </span>
-                       {/* <p className="">{result.strIngredient1}</p>*/}
+                        {/* <p className="">{result.strIngredient1}</p>*/}
                         <p className="text-gray-300 py-2 ">
                           <strong>Instructions:</strong>
                           {result.strInstructions}
@@ -120,14 +119,14 @@ function App() {
                         <img
                           src={result.strMealThumb}
                           alt="meal-image"
-                          className=" animate-spin-slow rounded-full shadow-2xl contrast-100 transform transition-transform hover:scale-110 h-max "
+                          className="  rounded-full shadow-2xl contrast-100  h-max "
                         />
                       </div>
                       <hr />
                     </div>
                   ))}
                 </div>
-                <Footer/>
+                <Footer />
               </>
             ) : (
               <NotFound />
@@ -173,14 +172,16 @@ function NumResults({ results }) {
   );
 }
 
-function Footer(){
-  return(
+function Footer() {
+  return (
     <>
-    <div className="container m-auto">
-      <p className=" text-gray-300 text-center">&copy; Naresh Rajbanshi 2023. All rights reserved. </p>
-    </div>
+      <div className="container m-auto">
+        <p className=" text-gray-300 text-center">
+          &copy; Naresh Rajbanshi 2023. All rights reserved.{" "}
+        </p>
+      </div>
     </>
-  )
+  );
 }
 
 export default App;
